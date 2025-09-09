@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recurso Interativo: Ferramentas do Humor</title>
+
+    <!-- 1. Link para o CSS do Bootstrap (via CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. Link para os Ícones do Bootstrap (opcional, pode ser removido) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- 3. CSS Personalizado com a sua paleta de cores -->
+    <style>
+        /* Cores principais da sua paleta */
+        :root {
+            --cor-fundo: #210047;
+            --cor-texto: #ffc629;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            padding: 2rem;
+        }
+
+        .container-principal {
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.2); /* Um fundo levemente transparente para destacar */
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--cor-texto);
+            box-shadow: 0 4px 15px rgba(255, 198, 41, 0.1);
+        }
+        
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+
+        hr {
+            border-color: var(--cor-texto);
+            opacity: 0.5;
+            margin: 2rem 0;
+        }
+        
+        /* --- Estilizando o Acordeão --- */
+        .accordion {
+            margin-top: 1.5rem;
+        }
+
+        .accordion-item {
+            background-color: transparent;
+            border: 1px solid rgba(255, 198, 41, 0.5);
+            border-radius: 5px !important; /* !important para sobrepor o Bootstrap */
+            margin-bottom: 10px;
+        }
+
+        .accordion-header .accordion-button {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: var(--cor-texto);
+            font-weight: bold;
+            border-radius: 5px !important;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 198, 41, 0.25);
+            border-color: var(--cor-texto);
+        }
+
+        /* Estilo do botão do acordeão quando está aberto */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--cor-texto);
+            color: var(--cor-fundo);
+        }
+
+        .accordion-body {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff; /* Texto branco no corpo para melhor leitura */
+        }
+        
+        /* Adiciona um ícone de '+' e '-' para indicar expansão */
+        .accordion-button::after {
+            font-family: 'bootstrap-icons';
+            content: '\F4FE'; /* Ícone de '+' */
+            font-weight: bold;
+            background-image: none;
+            color: var(--cor-texto);
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            content: '\F470'; /* Ícone de '-' */
+            color: var(--cor-fundo);
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-principal">
+        <h1>Tema 2: Conheça Quem Conhece</h1>
+        <p>O humor é uma ferramenta poderosa para o autoconhecimento e a comunicação. Para usar essa arte com maestria, é preciso conhecer seus princípios e aplicá-los com consciência.</p>
+        
+        <hr>
+
+        <h3>Ferramentas do Humor Consciente</h3>
+        <p>Clique em cada ferramenta abaixo para expandir e ler a descrição.</p>
+        
+        <!-- Acordeão com o conteúdo diretamente na página -->
+        <div class="accordion" id="accordionGuiaPratico">
+
+            <!-- Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Use o Humor como Espelho
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaPratico">
+                    <div class="accordion-body">
+                        Rir das próprias imperfeições é um convite para se olhar com mais gentileza. Ao se divertir com uma falha sua em vez de se criticar, você quebra a barreira do perfeccionismo e aprende a lidar com erros de forma mais serena.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Crie Distância para Ganhar Perspectiva
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaPratico">
+                    <div class="accordion-body">
+                        O humor ajuda a criar um distanciamento saudável dos desafios, fazendo com que pareçam menos ameaçadores. Narrar uma experiência difícil com um toque de humor, por exemplo, transforma o relato em um ato de resiliência.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Aprenda com os Profissionais
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaPratico">
+                    <div class="accordion-body">
+                        Grandes humoristas mostram que é possível abordar temas complexos com respeito. Eles se conectam com o público por meio da empatia, provando que o humor não precisa ser ofensivo para ser poderoso.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Evite os Exageros e a Ofensa
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaPratico">
+                    <div class="accordion-body">
+                        Usar o humor de forma responsável é uma habilidade crucial. Piadas exageradas ou ofensivas podem afastar as pessoas em vez de conectá-las. O objetivo é que o humor seja uma ponte, e não um muro.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Cuidado com a Autodepreciação Excessiva
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaPratico">
+                    <div class="accordion-body">
+                        Uma coisa é rir de um erro, outra é usar o humor para se diminuir constantemente. A autodepreciação excessiva pode agravar problemas emocionais e passar uma imagem negativa. O equilíbrio é a chave.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Faça a Leitura do Ambiente
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaPratico">
+                    <div class="accordion-body">
+                        É fundamental "ler" o contexto cultural e emocional do seu público para adaptar o humor. A sensibilidade para entender o momento certo é o que transforma uma simples piada em uma conexão genuína.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 4. Link para o JavaScript do Bootstrap (via CDN) - SEMPRE NO FINAL DO BODY -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
